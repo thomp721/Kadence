@@ -17,14 +17,14 @@ import java.nio.file.Path;
 
 public class SoundtrackWrapper {
 
-    private static final String File_Name = "hhhhh";
+    private static final String File_Name = "SoundtrackQueue.txt";
     //Path path = FileSystems.getDefault().getPath("logs", "access.log");
 
 
 
 
 
-    public void SaveSoundtrackQueue(String args[], Soundtrack[] SoundtrackArray, Context c)
+    public void SaveSoundtrackQueue( Soundtrack[] SoundtrackArray, Context c)
     {
 
         String path = c.getFilesDir().getAbsolutePath();
