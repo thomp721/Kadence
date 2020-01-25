@@ -11,4 +11,5 @@ public class ModeMenu extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mode_menu);
     }
+
 }
