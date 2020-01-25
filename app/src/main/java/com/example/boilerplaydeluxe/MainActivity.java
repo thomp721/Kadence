@@ -52,4 +52,7 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+    public void Welcome() {
+        Toast.makeText(getApplicationContext(), "Welcome to Beatmaker!", Toast.LENGTH_SHORT).show();
+    }
 }
