@@ -4,9 +4,11 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.Library.MusicPlayerSetup;
+
 import java.util.Scanner;
 import java.io.IOException;
-import java.util.Random;
 
 public class MusicPlayer extends AppCompatActivity {
     Scanner s = new Scanner(System.in);

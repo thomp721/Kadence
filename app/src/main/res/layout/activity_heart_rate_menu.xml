@@ -89,6 +89,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/HeartrateSpinner"
         android:layout_marginTop="30dp"
-        android:text="Soundtrack me"></Button>
+        android:text="Soundtrack me"
+        android:onClick="HRToMusicPlayer"
+        ></Button>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

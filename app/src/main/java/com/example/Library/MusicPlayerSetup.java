@@ -1,4 +1,4 @@
-package com.example.boilerplaydeluxe;
+package com.example.Library;
 
 public class MusicPlayerSetup {
     int heartRate;

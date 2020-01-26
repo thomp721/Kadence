@@ -108,6 +108,7 @@ public class MainActivity extends AppCompatActivity {
     public void ToModeMenu(View v)
     {
         Intent intent = new Intent(this, ModeMenu.class);
+        startActivity(intent);
     }
 
 }
