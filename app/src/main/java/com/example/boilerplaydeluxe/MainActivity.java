@@ -14,6 +14,7 @@ import androidx.appcompat.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.spotify.android.appremote.api.ConnectionParams;
@@ -32,6 +33,8 @@ public class MainActivity extends AppCompatActivity {
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_main);
+        Toast.makeText(this, "dsgfoinf", Toast.LENGTH_LONG);
+        Button mBTN = findViewById(R.id.LoginBTN);
         }
 
         @Override
@@ -50,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
                             Log.e("MyActivity", throwable.getMessage(), throwable);
                         }
                     });
+
         }
 
 

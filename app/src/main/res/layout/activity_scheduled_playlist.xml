@@ -42,6 +42,7 @@
         android:layout_marginTop="100dp"
         android:layout_marginRight="10dp"
         android:layout_marginBottom="40dp"
+        android:id="@+id/RootScroll"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -55,7 +56,7 @@
             >
             <androidx.appcompat.widget.AppCompatSpinner
                 android:layout_width="120dp"
-                android:layout_height="match_parent"
+                android:layout_height="50dp"
                 ></androidx.appcompat.widget.AppCompatSpinner>
 
             <androidx.appcompat.widget.AppCompatSpinner
@@ -74,7 +75,7 @@
 
 
     </ScrollView>
-
+<!---
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/AddSoundtrackBTN"
         android:layout_width="wrap_content"
@@ -96,6 +97,29 @@
         app:srcCompat="@android:drawable/ic_media_play"
         android:onClick="ToMusicPlayer"
         />
+        -->
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/AddSoundtrackBTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="AddSoundtrack"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_editor_absoluteX="200dp"
+        app:layout_editor_absoluteY="300dp"></androidx.appcompat.widget.AppCompatButton>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/PlayBTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="ToMusicPlayer"
+        android:text="Next screen"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_editor_absoluteX="200dp"
+        app:layout_editor_absoluteY="350dp"></androidx.appcompat.widget.AppCompatButton>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

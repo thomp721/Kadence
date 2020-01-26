@@ -7,17 +7,16 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.Library.MusicPlayerSetup;
 
-import java.util.Scanner;
+
 import java.io.IOException;
 
 public class MusicPlayer extends AppCompatActivity {
-    Scanner s = new Scanner(System.in);
+
     private double timeRemaining;
     private com.example.Library.Soundtrack[] soundtrack;
     public MusicPlayer(com.example.Library.Soundtrack[] soundtrack) {
         this.soundtrack = soundtrack;
-        System.out.println("Enter a number of minutes you would like to listen to music for");
-        timeRemaining = s.nextDouble();
+
         onCreate(new Bundle());
     }
     @Override
