@@ -23,16 +23,21 @@ public class MusicPlayer extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         MediaPlayer mp = new MediaPlayer();
-        for (int i = 0; i < soundtrack.length; i++) {
-            MusicPlayerSetup mps = new MusicPlayerSetup(soundtrack[i].getHeartRate());
-            try {
-                com.example.Library.DbRetrieve dbr = new com.example.Library.DbRetrieve();
-                mp.setDataSource(dbr.retrieveSongUID(soundtrack[i].getGenre(), mps.getMusicLevel(),
-                        (int)(Math.random() * 5 + 1)));
-                timeRemaining = timeRemaining - soundtrack[i].getTime();
+        while(timeRemaining > 0) {
+            for (int i = 0; i < soundtrack.length; i++) {
+                MusicPlayerSetup mps = new MusicPlayerSetup(soundtrack[i].getHeartRate());
+                try {
+                    com.example.Library.DbRetrieve dbr = new com.example.Library.DbRetrieve();
+                    mp.setDataSource(dbr.retrieveSongUID(soundtrack[i].getGenre(), mps.getMusicLevel(),
+                            (int) (Math.random() * 5 + 1)));
+                    timeRemaining = timeRemaining - soundtrack[i].getTime();
+                    if (timeRemaining <= 0) {
+                        break;
+                    }
 
-            } catch (IOException io) {
+                } catch (IOException io) {
 
+                }
             }
         }
     }
