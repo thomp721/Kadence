@@ -1,5 +1,6 @@
 package com.example.boilerplaydeluxe;
 ;
+import android.content.Intent;
 import android.os.Bundle;
 
 import android.util.Log;
@@ -101,8 +102,10 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
-    public void Welcome() {
-        Toast.makeText(getApplicationContext(), "Welcome to Boiler Play Deluxe!", Toast.LENGTH_SHORT).show();
+
+    public void ToModeMenu(View v)
+    {
+        Intent intent = new Intent(this, ModeMenu.class);
     }
 
 }
