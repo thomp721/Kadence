@@ -38,13 +38,13 @@ public class DbRetrieve {
 			resultSet = statement.executeQuery(moveToDB);
 
 			String selectFromTable = "SELECT time FROM entries WHERE entryID=\"" + entryID + "\";";
-			Double time = Double.parseDouble(statement.executeQuery(selectFromTable));
+			Double time = Double.parseDouble(statement.executeQuery(selectFromTable).toString());
 
 			selectFromTable = "SELECT heartRange FROM entries WHERE entryID=\"" + entryID + "\";";
-			String heartRange = statement.executeQuery(selectFromTable);
+			String heartRange = statement.executeQuery(selectFromTable).toString();
 
 			selectFromTable = "SELECT genre FROM entries WHERE entryID=\"" + entryID + "\";";
-			String genre = statement.executeQurey(selectFromTable);
+			String genre = statement.executeQuery(selectFromTable).toString();
 
 			Soundtrack soundtrack = new Soundtrack(heartRange, time, genre);
 			return soundtrack;
@@ -59,8 +59,8 @@ public class DbRetrieve {
 			String moveToDB = "USE soundtracks;";
 			resultSet = statement.executeQuery(moveToDB);
 
-			String sendToDB = "INSERT INTO entries (time, heartRange, genre) VALUES("heartRange", "time.toString()", "genre");";
-			resultSet = statement.executeQuery(moveToDB);
+			String sendToDB = String.format("INSERT INTO entries (time, heartRange, genre) VALUES(%s, %2s, %3s);",heartRange, time, genre);
+			resultSet = statement.executeQuery(sendToDB);
 
 			return 1;
 		} catch (Exception e) {
