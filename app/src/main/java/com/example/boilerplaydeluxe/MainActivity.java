@@ -15,10 +15,18 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-//import com.spotify.android.appremote.api.ConnectionParams;
-//import com.spotify.android.appremote.api.Connector;
-//import com.spotify.android.appremote.api.SpotifyAppRemote;
+import com.spotify.android.appremote.api.ConnectionParams;
+import com.spotify.android.appremote.api.Connector;
+import com.spotify.android.appremote.api.SpotifyAppRemote;
+
+import com.spotify.protocol.client.Subscription;
+import com.spotify.protocol.types.PlayerState;
+import com.spotify.protocol.types.Track;
+
 public class MainActivity extends AppCompatActivity {
+    private static final String CLIENT_ID = "c83a244add8248a1b1f6bb11ad9cc2b2";
+    private static final String REDIRECT_URI = "BoilerPlayDeluxe://";
+    private SpotifyAppRemote mSpotifyAppRemote;
     @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
@@ -28,11 +36,25 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected void onStart() {
             super.onStart();
-            // We will start writing our code here.
+            ConnectionParams connectionParams = new ConnectionParams.Builder(CLIENT_ID).setRedirectUri(REDIRECT_URI).showAuthView(true).build();
+            SpotifyAppRemote.connect(this, connectionParams,
+                    new Connector.ConnectionListener() {
+                        public void onConnected(SpotifyAppRemote spotifyAppRemote) {
+                            mSpotifyAppRemote = spotifyAppRemote;
+                            Log.d("MainActivity", "Connected! BoilerUp!");
+                            connected();
+                        }
+
+                        public void onFailure(Throwable throwable) {
+                            Log.e("MyActivity", throwable.getMessage(), throwable);
+                        }
+                    });
         }
 
+
+
         private void connected() {
-            // Then we will write some more code here.
+            mSpotifyAppRemote.getPlayerApi().play("spotify:playlist:37i9dQZF1DX2sUQwD7tbml");
         }
 
         @Override
