@@ -58,10 +58,12 @@ public class MainActivity extends AppCompatActivity {
             mSpotifyAppRemote.getPlayerApi().play("spotify:playlist:37i9dQZF1DX2sUQwD7tbml");
         }
 
+
+
         @Override
         protected void onStop() {
             super.onStop();
-            // Aaand we will finish off here.
+            SpotifyAppRemote.disconnect(mSpotifyAppRemote);
         }
 
     //@Override
