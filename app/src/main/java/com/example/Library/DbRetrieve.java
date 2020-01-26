@@ -31,4 +31,15 @@ public class DbRetrieve {
 		}
 		return "";
 	}
+
+	public Soundtrack retrieveSoundtrack(int entryID) {
+		try {
+			String moveToDB = "USE soundtracks;";
+			resultSet = statement.executeQuery(moveToDB);
+			String selectFromTable = "SELECT ";
+		} catch (Exception e) {
+			System.out.println("Error: " + e);
+		}
+		return new Soundtrack();
+	}
 }
