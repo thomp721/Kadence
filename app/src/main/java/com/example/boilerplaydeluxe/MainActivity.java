@@ -1,6 +1,7 @@
 package com.example.boilerplaydeluxe;
 ;
 import android.os.Bundle;
+
 import android.util.Log;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -16,7 +17,7 @@ import android.widget.Toast;
 
 //import com.spotify.android.appremote.api.ConnectionParams;
 //import com.spotify.android.appremote.api.Connector;
-//import com.spotify.android.appremote.api.SpotifyAppRemote
+//import com.spotify.android.appremote.api.SpotifyAppRemote;
 public class MainActivity extends AppCompatActivity {
     @Override
         protected void onCreate(Bundle savedInstanceState) {
