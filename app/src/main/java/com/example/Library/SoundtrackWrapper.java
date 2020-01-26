@@ -5,16 +5,21 @@ import android.widget.Toast;
 import com.example.Library.Soundtrack;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.nio.file.FileSystems;
+import java.nio.file.Path;
 
 
 public class SoundtrackWrapper {
 
     private static final String File_Name = "hhhhh";
+    //Path path = FileSystems.getDefault().getPath("logs", "access.log");
+
 
 
 
@@ -22,6 +27,8 @@ public class SoundtrackWrapper {
     public void SaveSoundtrackQueue(String args[], Soundtrack[] SoundtrackArray, Context c)
     {
 
+        String path = c.getFilesDir().getAbsolutePath();
+        File file = new File(path + "/SoundtrackQueue.txt");
 
         String text = "";
         FileOutputStream fos = null;
