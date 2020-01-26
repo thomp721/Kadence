@@ -3,7 +3,7 @@ package com.example.boilerplaydeluxe;
 public class MusicPlayerSetup {
     int heartRate;
     String musicLevel;
-    public MusicPlayerSetup(int heartRate) {
+    public MusicPlayerSetup(String heartRate) {
         if (this.heartRate <= 100) {
             musicLevel = "resting";
         } else if (this.heartRate <= 130) {

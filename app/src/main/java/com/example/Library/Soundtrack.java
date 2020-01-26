@@ -2,12 +2,15 @@ package com.example.Library;
 
 public class Soundtrack {
 
-    private int HeartRate;
+
+
+    private String HeartRange;
     private double Time;
     private String Genre;
 
-    public void setHeartRate(int heartRate) {
-        HeartRate = heartRate;
+
+    public void setHeartRate(String heartRate) {
+        HeartRange = heartRate;
     }
 
     public void setTime(double time) {
@@ -20,8 +23,8 @@ public class Soundtrack {
 
 
 
-    public int getHeartRate() {
-        return HeartRate;
+    public String getHeartRate() {
+        return HeartRange;
     }
 
     public double getTime() {
