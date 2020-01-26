@@ -22,21 +22,21 @@ public class ScheduledPlaylist extends AppCompatActivity {
 
     List<Spinner> Spinners = new ArrayList<Spinner>();
     Button AddBTN;
-    Button NextBTN;
+    FloatingActionButton NextBTN;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Toast.makeText(this, "dsgfoinf", Toast.LENGTH_LONG);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scheduled_playlist);
-        AddBTN = findViewById(R.id.AddSoundtrackBTN);
+
         NextBTN = findViewById((R.id.PlayBTN));
 
 
     }
 
     public void ToMusicPlayer(View view) {
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, MusicPlayer.class);
         startActivity(intent);
 
     }

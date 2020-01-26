@@ -98,18 +98,7 @@
         android:onClick="ToMusicPlayer"
         />
         -->
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/AddSoundtrackBTN"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="AddSoundtrack"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-
-        app:layout_editor_absoluteX="200dp"
-        app:layout_editor_absoluteY="300dp"></androidx.appcompat.widget.AppCompatButton>
-
+<!---
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/PlayBTN"
         android:layout_width="wrap_content"
@@ -120,6 +109,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_editor_absoluteX="200dp"
         app:layout_editor_absoluteY="350dp"></androidx.appcompat.widget.AppCompatButton>
+-->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/PlayBTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="250dp"
+        android:layout_marginBottom="20dp"
+        android:clickable="true"
+        android:onClick="ToMusicPlayer"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@android:drawable/ic_media_play" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

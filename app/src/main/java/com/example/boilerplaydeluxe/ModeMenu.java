@@ -19,7 +19,7 @@ public class ModeMenu extends AppCompatActivity {
 
     public void ToHeartRateMenu(View v)
     {
-        Intent intent = new Intent(this, HeartRateMenu.class);
+        Intent intent = new Intent(this, MusicPlayer.class);
         startActivity(intent);
     }
     public void ToScheduledMenu(View v)
