@@ -6,4 +6,89 @@
     android:layout_height="match_parent"
     tools:context=".HeartRateMenu">
 
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginStart="0dp"
+        android:background="?attr/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
+        app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/TitleTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose Your Soundtrack theme!"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"></androidx.appcompat.widget.AppCompatTextView>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/GenreTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TitleTV"
+        android:text="Pick your Genre">
+
+    </androidx.appcompat.widget.AppCompatTextView>
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/GenreSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="150dp"
+        android:minHeight="30dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/GenreTV" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/HeartrateTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pick your heartrate range"
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/GenreSpinner"></androidx.appcompat.widget.AppCompatTextView>
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/HeartrateSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="150dp"
+        android:minHeight="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/HeartrateTV"></androidx.appcompat.widget.AppCompatSpinner>
+
+    <Button
+        android:id="@+id/EnterBTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/HeartrateSpinner"
+        android:layout_marginTop="30dp"
+        android:text="Soundtrack me"></Button>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
